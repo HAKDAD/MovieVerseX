@@ -1,0 +1,108 @@
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Loading Spinner */
+  .loading-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+  }
+  
+  /* Bookings Container */
+  .bookings-container {
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #000;
+  }
+  
+  /* Bookings Title */
+  h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 10vh;
+    color: #fff;
+  }
+  
+  /* Booking Card */
+  .booking-card {
+    background-color: #e84393;
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    border-radius: 10px; /* Add curved edges */
+  }
+  
+  .booking-card:hover {
+    background-color: #ff6498; /* Change background color on hover */
+    transform: translateY(-4px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .booking-card div {
+    margin-bottom: 5px;
+  }
+  
+  .booking-card strong {
+    font-weight: bold;
+  }
+  
+  .booking-card ul {
+    padding-left: 20px;
+  }
+  
+  /* Payment Status */
+  .payment-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .payment-status strong {
+    display: flex;
+    align-items: center;
+  }
+  
+  .payment-status p {
+    font-weight: lighter;
+    margin-left: 10px;
+  }
+  
+  /* Cancel Ticket Button */
+  .cancel-ticket-btn {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px; /* Add curved edges */
+  }
+  
+  .cancel-ticket-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .cancel-ticket-btn:hover:enabled {
+    background-color: #cc0000;
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+    .bookings-container {
+      padding: 10px;
+    }
+  
+    .booking-card {
+      font-size: 14px;
+    }
+  }
+  

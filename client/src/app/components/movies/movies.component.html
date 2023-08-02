@@ -1,0 +1,28 @@
+<div>
+    <div *ngIf="isLoading" class="bg-dark" style="min-height: 100vh;">
+        <app-loader-spinner></app-loader-spinner>
+    </div>
+    <div class="movies-list bg-dark text-light" *ngIf="!isLoading">
+        <button class="btn btn-secondary mb-4" style="padding: 10px 30px;" routerLink="/">
+            Back to Home
+        </button>
+        <h2>All Movies</h2>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search movies..." [(ngModel)]="searchTerm" (input)="filterMovies()">
+        </div>
+
+        <div class="row movie-grid">
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4" *ngFor="let movie of filteredMovies">
+                <div class="card movie-card" [routerLink]="'/movie/' + movie._id">
+                    <img [src]="movie.image_url" class="card-img-top" alt="Movie Poster">
+                    <div class="card-body">
+                        <h3 class="card-title">{{ movie.title }}</h3>
+                        <p class="card-text">{{ movie.genre }}</p>
+                        <p class="card-text">Release Date: {{ movie.release_date | date }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

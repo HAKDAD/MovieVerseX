@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="login-container">
+        <img src="https://img.freepik.com/free-vector/tablet-login-concept-illustration_114360-7863.jpg?w=740&t=st=1690900626~exp=1690901226~hmac=0cb4c55b679b8951815edf52cd70dfb54059ce7e968ca64ef8cd55f0c0254895
+        " alt="" class="image" />
+        <div class="card">
+            <form [formGroup]="regForm" #r="ngForm" (ngSubmit)="onSubmit(r.value)" class="form">
+                <h2 class="heading text-center">Welcome Back!</h2>
+                <div class="form-group mb-2">
+                    <label for="email">Email</label>
+                    <input placeholder="Enter your email" type="email" class="form-control" id="email" formControlName="email" required>
+                    <div *ngIf="regForm.controls['email'].touched && regForm.controls['email']?.['errors']">
+                        <div *ngIf="regForm.controls['email']?.['errors']?.['required']" class="error-message text-danger">
+                            Email is required
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="password">Password</label>
+                    <input placeholder="Enter your password" type="password" class="form-control" id="password" formControlName="password" required>
+                    <div *ngIf="regForm.controls['password'].touched && regForm.controls['password']?.['errors']">
+                        <div *ngIf="regForm.controls['password']?.['errors']?.['required']"
+                            class="error-message text-danger">
+                            Password is required
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary mt-4 w-100" [disabled]="regForm.invalid">Sign In</button>
+                <div class="mt-2"><a routerLink="/register" class="mt-2">Don't have an account? Click here to register</a></div>
+                <a routerLink="/theater-login" class="mt-4">Theater Owner? Click here to login.</a>
+            </form>
+        </div>
+    </div>
+</div>

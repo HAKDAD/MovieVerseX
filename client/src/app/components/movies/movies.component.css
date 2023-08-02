@@ -1,0 +1,64 @@
+.movies-list {
+    padding: 20px;
+    min-height: 100vh;
+    padding-top: 14vh;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: #f3f3f3;
+    border-radius: 4px;
+    outline: none;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: 60px,20px;
+    grid-gap: 20px; /* Add spacing between the card rows */
+}
+
+.card {
+    background-color: #333333; /* Dark background color for the movie card */
+    color: #ffffff; /* White text color for the movie card */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Reduced box shadow */
+}
+
+.card:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Increased box shadow on hover */
+    transform: translateY(-4px); /* Add a slight translation upwards on hover */
+}
+
+.card-img-top {
+    width: 100%;
+    height: 400px; /* Set a fixed height for the card image */
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 10px; /* Add padding for the content inside the card */
+}
+
+.card-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.card-text {
+    font-size: 12px;
+    margin-bottom: 5px;
+}

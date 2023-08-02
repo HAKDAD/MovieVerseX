@@ -1,0 +1,293 @@
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Payment Modal */
+.modal-dialog {
+  max-width: 400px;
+}
+
+.modal-content {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
+.modal-header {
+  background-color: #007bff;
+  color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.close {
+  color: #fff;
+  font-size: 24px;
+  opacity: 1;
+}
+
+.close:hover {
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.modal-footer {
+  padding: 10px 20px;
+  text-align: right;
+  background-color: #f8f9fa;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .modal-dialog {
+    max-width: 90%;
+  }
+
+  .modal-body {
+    padding: 10px;
+  }
+
+  .form-control {
+    font-size: 14px;
+  }
+}
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Selected Seats */
+.selected-seats {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.selected-seats p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Total Price */
+.selected-seats p:last-child {
+  color: #e84393;
+  font-weight: bold;
+}
+
+/* Payment Method */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #f8f9fa; /* Light gray background color for the select element */
+}
+
+/* Select Payment Method option style */
+.input-field option {
+  background-color: #fff; /* White background color for the options */
+}
+
+/* Payment Method label */
+label[for="payment"] {
+  font-size: 18px;
+  color: #e84393; /* Pink color for the label text */
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+/* Payment Method select dropdown arrow */
+.input-field::after {
+  content: "\25BC"; /* Down arrow symbol */
+  font-size: 16px;
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  color: #666; /* Gray color for the arrow */
+}
+
+/* Payment Method select dropdown arrow on hover */
+.input-field:hover::after {
+  color: #444; /* Dark gray color for the arrow on hover */
+}
+
+/* Payment Method select dropdown arrow on active */
+.input-field:focus::after {
+  color: #222; /* Black color for the arrow on focus */
+}
+
+/* Payment Method select dropdown option on hover */
+.input-field option:hover {
+  background-color: #e84393; /* Pink background color for the options on hover */
+  color: #fff; /* White text color for the options on hover */
+}
+
+/* Payment Method select dropdown option on select */
+.input-field option:checked {
+  background-color: #e84393; /* Pink background color for the selected option */
+  color: #fff; /* White text color for the selected option */
+}
+
+
+.movie-details {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  min-height: 100vh;
+  padding-top: 14vh;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.image-container {
+  flex: 0 0 auto;
+  width: 40%;
+  margin-right: 20px;
+  overflow: hidden; /* Add overflow to create floating effect */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Add shadow for floating effect */
+}
+
+.image-container img {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover; /* Maintain aspect ratio for the image */
+}
+
+.details-container {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+  background-color: #333333; /* Dark background color for the details container */
+  color: #ffffff; /* White text color for the details */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Add shadow for floating effect */
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 5px;
+}
+
+.btn {
+  width: fit-content;
+}
+
+/* Apply responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+  .movie-details {
+      flex-direction: column;
+  }
+
+  .details-container {
+      width: 100%;
+      padding: 20px;
+  }
+
+  .image-container {
+      width: 100%;
+  }
+
+  .image-container img {
+      width: 100%;
+      height: auto;
+  }
+
+  .btn {
+      width: 100%;
+  }
+}
+
+.seat-grid {
+  display: grid;
+  grid-template-rows: repeat(10, 60px); /* Set 5 seats in a row, adjust as needed */
+  grid-gap: 10px; /* Add spacing between the seats */
+  justify-content: center; /* Center the seats horizontally */
+  margin: 30px; /* Add margin to separate from movie details */
+}
+
+.seat {
+  width: 60px;
+  height: 60px; /* Set the square shape for seats */
+  border-radius: 50%; /* Make seats circular */
+  background-color: pink; /* Pink background color for seats */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow for floating effect */
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.seat:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Increased box shadow on hover */
+  transform: translateY(-4px); /* Add a slight translation upwards on hover */
+}
+
+.green-bg {
+  background-color: green;
+}
